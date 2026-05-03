@@ -20,7 +20,9 @@ pub struct LoginTemplate {
 
 #[derive(Template)]
 #[template(path = "homepage.html")]
-pub struct HomepageTemplate;
+pub struct HomepageTemplate {
+    pub username: String,
+}
 
 pub struct StatField {
     pub id: String,

@@ -67,7 +67,7 @@ async fn main() {
 async fn home(auth_session: AuthSession) -> impl IntoResponse {
     let name = auth_session.user.expect("Protected Page").username;
     info!("{} loaded homeage", name);
-    let template = HomepageTemplate {};
+    let template = HomepageTemplate { username: name };
     HtmlTemplate(template).into_response()
 }
 
