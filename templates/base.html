@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% block title %}{{ title }}{% endblock %}</title>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"></script> -->
         <script src="/assets/htmx-2.0.10.min.js"></script>
         <link href="/assets/styles.css" rel="stylesheet" />
+
+        <title>{% block title %}{{ title }}{% endblock %}</title>
+
         {% block basehead %}{% endblock %}
     </head>
     <body>
-        <div id="content">
-        {% block basecontent %}<p>Placeholder content</p>{% endblock %}
+        <div id="content-wrapper">
+            {% block basecontent %}<p>Placeholder content</p>{% endblock %}
         </div>
     </body>
 </html>

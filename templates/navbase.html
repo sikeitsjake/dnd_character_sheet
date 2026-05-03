@@ -6,22 +6,24 @@
 {% endblock %}
 
 {% block basecontent %}
-<div class="top-navbar">
-    <div class="navbar-logo">
-        Character Sheet
-    </div>
-    <div class="navbar-actions">
-        <a href="/home">Home</a>
-        <a href="/characters">Characters</a>
-        <a href="/campaigns">Campaigns</a>
-        <a href="/settings">Settings</a>
-        <a href="/logout">Logout</a>
-        <div class="user-dropdown">
-            {{ username }}
+<div class="page-container">
+    <div class="top-navbar">
+        <div class="navbar-logo">
+            Character Sheet
+        </div>
+        <div class="navbar-actions">
+            <a href="/">Home</a>
+            <a href="/characters">Characters</a>
+            <a href="/campaigns">Campaigns</a>
+            <a href="/settings">Settings</a>
+            <a href="/logout">Logout</a>
+            <div class="user-dropdown">
+                {{ username }}
+            </div>
         </div>
     </div>
+
+    {% block content %}{% endblock %}
 </div>
 
-
-{% block content %}{% endblock %}
 {% endblock %}

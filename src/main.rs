@@ -97,27 +97,39 @@ async fn calculate(auth_session: AuthSession, body: String) -> impl IntoResponse
 }
 
 async fn characters(auth_session: AuthSession) -> impl IntoResponse {
-    "under construction"
+    let name = auth_session.user.expect("Protected Page").username;
+    let template = UnderConstructionTemplate { username: name };
+    HtmlTemplate(template).into_response()
 }
 
 async fn campaigns(auth_session: AuthSession) -> impl IntoResponse {
-    "under construction"
+    let name = auth_session.user.expect("Protected Page").username;
+    let template = UnderConstructionTemplate { username: name };
+    HtmlTemplate(template).into_response()
 }
 
 async fn settings(auth_session: AuthSession) -> impl IntoResponse {
-    "under construction"
+    let name = auth_session.user.expect("Protected Page").username;
+    let template = UnderConstructionTemplate { username: name };
+    HtmlTemplate(template).into_response()
 }
 
 async fn items(auth_session: AuthSession) -> impl IntoResponse {
-    "under construction"
+    let name = auth_session.user.expect("Protected Page").username;
+    let template = UnderConstructionTemplate { username: name };
+    HtmlTemplate(template).into_response()
 }
 
 async fn classes(auth_session: AuthSession) -> impl IntoResponse {
-    "under construction"
+    let name = auth_session.user.expect("Protected Page").username;
+    let template = UnderConstructionTemplate { username: name };
+    HtmlTemplate(template).into_response()
 }
 
 async fn notes(auth_session: AuthSession) -> impl IntoResponse {
-    "under construction"
+    let name = auth_session.user.expect("Protected Page").username;
+    let template = UnderConstructionTemplate { username: name };
+    HtmlTemplate(template).into_response()
 }
 
 async fn login_page(Query(NextUrl { next }): Query<NextUrl>) -> impl IntoResponse {

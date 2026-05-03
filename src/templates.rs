@@ -19,6 +19,12 @@ pub struct LoginTemplate {
 }
 
 #[derive(Template)]
+#[template(path = "under-construction.html")]
+pub struct UnderConstructionTemplate {
+    pub username: String,
+}
+
+#[derive(Template)]
 #[template(path = "homepage.html")]
 pub struct HomepageTemplate {
     pub username: String,
