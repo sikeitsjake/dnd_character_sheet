@@ -72,3 +72,47 @@ Login
     |   +-- Create
     +-- Settings
 ```
+
+### Potential config formats for classes
+
+
+> version A
+```
+stats:
+    levels:
+        total: sum(classes)
+        classes:
+            - monk: static
+    base_strength: static
+    temp_strength: static
+    calculated_strength:
+        - condition: if set temp_strength
+          formula: temp_strength + sum(strength_modifiers)
+        - formula: base_strength + sum(strength_modifiers)
+    strength_modifier: calculated_strength / 2 - 5
+    bab: for each class - floor(sum(class_bab * class_lvl))
+    
+attack_unarmed:
+    tags: unarmed
+    attack: bab + strength_modifier
+    damage: 1d10
+attack_fob:
+    tags: unarmed
+    attack: level.monk - 2
+    damage: 1d10
+```
+> version B
+```
+    strength_modifier:
+        sub:
+            div:
+                field: calculated_strength
+                value: 2
+            value: 5
+    bab:
+        floor:
+            sum_prod:
+                - class_bab
+                - class_lvl
+            
+```

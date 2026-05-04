@@ -74,35 +74,3 @@ pub fn calc_route(val_map: &mut [i32], field: SheetField, new_val: i32) -> Vec<S
 
     updated_fields
 }
-
-// pub fn get_calc_route() -> impl Fn(&mut HashMap<&str, i32>, &str, i32) -> Vec<StatField> {
-//
-//     let calc_route =
-//         move |val_map: &mut HashMap<&str, i32>, field: &str, new_val: i32| -> Vec<StatField> {
-//             let mut updated_fields = Vec::new();
-//
-//             *val_map.get_mut(field).unwrap() = new_val;
-//             let mut to_update_a = dep_map.get(field).unwrap().clone();
-//             let mut to_update_b = vec![];
-//
-//             while !to_update_a.is_empty() {
-//                 to_update_b.clear();
-//
-//                 for field in &to_update_a {
-//                     let new_val = calc_map.get(field).unwrap()(&val_map);
-//                     *val_map.get_mut(field).unwrap() = new_val;
-//                     updated_fields.push(StatField {
-//                         id: field.to_string(),
-//                         value: new_val,
-//                     });
-//                     to_update_b.extend_from_slice(dep_map.get(field).unwrap());
-//                 }
-//
-//                 std::mem::swap(&mut to_update_a, &mut to_update_b);
-//             }
-//
-//             updated_fields
-//         };
-//
-//     calc_route
-// }
