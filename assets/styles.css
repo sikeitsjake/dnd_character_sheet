@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+input {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
 .top-navbar {
     padding: 1rem;
     background-color: #505050;
