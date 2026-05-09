@@ -34,7 +34,6 @@
 {% endmacro %}
 
 {% macro skill_row(skill) %}
-<div class="skill">
     <span class="label">{{ skill | capitalize }}</span>
     <div
         hx-swap-oob="innerHtml"
@@ -49,7 +48,6 @@
         name="{{ skill }}_rank"
         id="{{ skill }}_rank"
     />
-</div>
 {% endmacro %}
 
 {% block content %}
@@ -65,45 +63,45 @@
         </div>
         <div class="other-stats">
             <div class="card skills-card">
-                <div class="label">Skills</div>
-                <div class="skill-list">
-                    {{ skill_row("acrobatics") }}
-                    {{ skill_row("appraise") }}
-                    {{ skill_row("bluff") }}
-                    {{ skill_row("climb") }}
-                    {{ skill_row("craft") }}
-                    {{ skill_row("diplomacy") }}
-                    {{ skill_row("disabledevice") }}
-                    {{ skill_row("disguise") }}
-                    {{ skill_row("escapeArtist") }}
-                    {{ skill_row("fly") }}
-                    {{ skill_row("handleAnimal") }}
-                    {{ skill_row("heal") }}
-                    {{ skill_row("knowledge_arcana") }}
-                    {{ skill_row("knowledge_Dungeoneering") }}
-                    {{ skill_row("knowledge_Engineering") }}
-                    {{ skill_row("knowledge_Geography") }}
-                    {{ skill_row("knowledge_history") }}
-                    {{ skill_row("knowledge_local") }}
-                    {{ skill_row("knowledge_nature") }}
-                    {{ skill_row("knowledge_nobility") }}
-                    {{ skill_row("knowledge_planes") }}
-                    {{ skill_row("knowledge_religion") }}
-                    {{ skill_row("linguistics") }}
-                    {{ skill_row("perception") }}
-                    {{ skill_row("perform") }}
-                    {{ skill_row("perform") }}
-                    {{ skill_row("profession") }}
-                    {{ skill_row("profession") }}
-                    {{ skill_row("ride") }}
-                    {{ skill_row("sense_motive") }}
-                    {{ skill_row("sleight_of_hand") }}
-                    {{ skill_row("spellcraft") }}
-                    {{ skill_row("stealth") }}
-                    {{ skill_row("survival") }}
-                    {{ skill_row("swim") }}
-                    {{ skill_row("use_magic_device") }}
-                </div>
+                <span class="header">Skill</span>
+                <span class="header">Score</span>
+                <span class="header">Ranks</span>
+                {{ skill_row("acrobatics") }}
+                {{ skill_row("appraise") }}
+                {{ skill_row("bluff") }}
+                {{ skill_row("climb") }}
+                {{ skill_row("craft") }}
+                {{ skill_row("diplomacy") }}
+                {{ skill_row("disabledevice") }}
+                {{ skill_row("disguise") }}
+                {{ skill_row("escapeArtist") }}
+                {{ skill_row("fly") }}
+                {{ skill_row("handleAnimal") }}
+                {{ skill_row("heal") }}
+                {{ skill_row("knowledge_arcana") }}
+                {{ skill_row("knowledge_Dungeoneering") }}
+                {{ skill_row("knowledge_Engineering") }}
+                {{ skill_row("knowledge_Geography") }}
+                {{ skill_row("knowledge_history") }}
+                {{ skill_row("knowledge_local") }}
+                {{ skill_row("knowledge_nature") }}
+                {{ skill_row("knowledge_nobility") }}
+                {{ skill_row("knowledge_planes") }}
+                {{ skill_row("knowledge_religion") }}
+                {{ skill_row("linguistics") }}
+                {{ skill_row("perception") }}
+                {{ skill_row("perform") }}
+                {{ skill_row("perform") }}
+                {{ skill_row("profession") }}
+                {{ skill_row("profession") }}
+                {{ skill_row("ride") }}
+                {{ skill_row("sense_motive") }}
+                {{ skill_row("sleight_of_hand") }}
+                {{ skill_row("spellcraft") }}
+                {{ skill_row("stealth") }}
+                {{ skill_row("survival") }}
+                {{ skill_row("swim") }}
+                {{ skill_row("use_magic_device") }}
             </div>
             <div class="rhd">
             </div>

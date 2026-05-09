@@ -94,14 +94,24 @@ html, body {
 .primary-stat-card .bottom-bar input:focus {
 }
 
-
-.skill {
-    display: flex;
-    flex-direction: row;
+.skills-card {
+    display: grid;
+    grid-template-columns: auto max-content max-content;
+    row-gap: 0.25rem;
 }
 
-.skill > .label {
-    flex-grow: 1;
+.skills-card input {
+    width: 3rem;
+    text-align: center;
+}
+
+.skills-card .header {
+    padding-inline: 0.5rem;
+    font-weight: 600;
+}
+
+.skills-card .rank, .skills-card .total {
+    justify-self: center;
 }
 
 
@@ -114,7 +124,6 @@ html, body {
     border: 1px solid oklch(44.6% 0.043 257.281);
     border-radius: 0.5rem;
     overflow: hidden;
-    flex
 }
 
 .card > .label {
@@ -130,17 +139,12 @@ html, body {
     gap: 1rem;
 }
 
-@media (width < 70rem) {
-    .main-sheet {
-        flex-direction: column;
-    }
-}
-
 .main-sheet > .stats-area {
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-sheet > .stats-area > .main-stats {
@@ -150,11 +154,25 @@ html, body {
     justify-content: center;
 }
 
+@media (width < 70rem) {
+    .main-sheet {
+        flex-direction: column;
+    }
+    .main-sheet > .stats-area > .main-stats {
+        gap: 1rem;
+    }
+}
+
 .main-sheet > .stats-area > .other-stats {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
 }
 
 .main-sheet > .stats-area > .other-stats > * {
     flex: 1;
 }
+
+.rhd {
+    border: 1px solid red;
+    }
